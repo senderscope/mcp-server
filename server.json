@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.senderscope/mcp-server",
+  "title": "Senderscope",
+  "description": "Reverse email lookup for B2B: profile behind a work email, email finder and verifier.",
+  "repository": {
+    "url": "https://github.com/senderscope/mcp-server",
+    "source": "github"
+  },
+  "websiteUrl": "https://senderscope.app/mcp-api/",
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "senderscope-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://senderscope.app/mcp"
+    }
+  ]
+}
