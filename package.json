@@ -1,0 +1,60 @@
+{
+  "name": "senderscope-mcp",
+  "version": "1.0.0",
+  "description": "Reverse email lookup, email finder and email verifier for B2B: MCP connector for Senderscope. See who owns a work email, find a work email and verify addresses.",
+  "type": "module",
+  "bin": {
+    "senderscope-mcp": "server/index.js"
+  },
+  "files": [
+    "server",
+    "icon.png",
+    "manifest.json",
+    "server.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test test/*.test.mjs",
+    "bundle": "mcpb pack . senderscope.mcpb"
+  },
+  "dependencies": {
+    "mcp-remote": "0.14.2"
+  },
+  "devDependencies": {
+    "@anthropic-ai/mcpb": "2.1.2"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "author": "Senderscope",
+  "license": "MIT",
+  "homepage": "https://senderscope.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senderscope/mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/senderscope/mcp-server/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude",
+    "senderscope",
+    "reverse-email-lookup",
+    "email-finder",
+    "email-verifier",
+    "email-verification",
+    "email-enrichment",
+    "find-work-email"
+  ],
+  "mcpName": "io.github.senderscope/mcp-server",
+  "overrides": {
+    "tmp": "^0.2.6"
+  }
+}

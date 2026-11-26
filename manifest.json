@@ -1,0 +1,38 @@
+{
+  "manifest_version": "0.3",
+  "name": "senderscope",
+  "display_name": "Reverse email lookup by Senderscope",
+  "version": "1.0.0",
+  "description": "Reverse email lookup, email finder and email verifier for B2B: MCP connector for Senderscope. See who owns a work email, find a work email and verify addresses.",
+  "long_description": "Reverse email lookup, email finder and email verifier for B2B in your AI assistant. Ask who owns this email and get the professional profile behind a work address: name, title, company and LinkedIn. Find a work email from a name and company domain or a LinkedIn profile, and run email verification on any address. Lookups use your Senderscope credits, one per result found. get_account reads your plan and credits. lookup_email returns the professional profile and deliverability behind a work email; find_email finds a work email from a name and company domain or a LinkedIn URL; verify_email checks deliverability, accept-all, SPF and DMARC. Each uses one credit only when it returns a result. list_lookups and get_lookup read your history for free.",
+  "author": {
+    "name": "Senderscope"
+  },
+  "homepage": "https://senderscope.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/senderscope/mcp-server"
+  },
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ]
+    }
+  },
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=22"
+    }
+  },
+  "license": "MIT"
+}
